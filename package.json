@@ -1,0 +1,14 @@
+{
+  "name": "algarismo-romano",
+  "version": "1.0.0",
+  "description": "Traduz algarismo romano",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "squad ofertas",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
