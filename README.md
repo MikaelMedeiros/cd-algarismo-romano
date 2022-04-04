@@ -54,7 +54,7 @@ Com isso, eles formavam os outros números usando combinações e com algumas re
 
 - Nenhum algarismo romano pode ser repetido por mais de 3 vezes seguidas. (Ex.: XXXX é um exemplo incorreto. Só iria até XXX = 30);
 
- Com isso em mente, teremos insumos para concretizar o intuito desse projeto, que é, fazer essa conversão de algarismo romano para um número literal.  
+ Com isso em mente, teremos insumos para concretizar o intuito desse projeto, que é, fazer essa conversão de algarismo romano para um algarismo arábico (Ex.: 1, 2, 3, 4...).  
 
 ### Para isso utilizaremos o Coding Dojo!
 
