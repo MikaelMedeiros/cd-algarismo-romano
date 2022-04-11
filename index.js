@@ -14,23 +14,27 @@ const romanos = [
 - M, 1000 (mil)
 */
 
-const romanNumbers = [
-    [1,'I'],
-    [4,'IV'],
-    [5, 'V'],
-    [9, 'IX'],
-    [10, 'X'],
-    [40, 'XL']
-]
+const romanNumbers =  new Map();
+
+romanNumbers.set('I', 1);
+romanNumbers.set('V', 5);
+romanNumbers.set('X', 10);
+romanNumbers.set('L', 50);
+romanNumbers.set('C', 100);
+romanNumbers.set('D', 500);
+romanNumbers.set('M', 1000);
+
+
 
 function converte(algarismoRomano) {
     let retornoArabico = 0;
-    for (let index = 0; index < romanNumbers.length; index++) {
-        if (algarismoRomano.toUpperCase() == romanos[index]){
-            retornoArabico = index + 1
-        }
-            
-    }
+    let size = algarismoRomano.length;
+    
+    for(i = 0; i < size; i++) {
+        let algarismo = algarismoRomano.charAt(i)        
+        retornoArabico = romanNumbers.get(algarismo.toUpperCase())         
+    }    
+
     return retornoArabico;
 }
 

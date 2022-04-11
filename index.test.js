@@ -19,10 +19,6 @@ test('Deve entender o símbolo II', () => {
 })
 
 
-
-
-
-
 //Três símbolos iguais
 test('Deve entender o símbolo III', () => {
     const numero = index.converte('III')
@@ -37,6 +33,7 @@ test('Deve entender o símbolo IV', () => {
 test('Deve entender o símbolo XXII', () => {
     const numero = index.converte('XXII')
     expect(numero).toEqual(22);
+    //arou
 })
 
 //Bora bora!
