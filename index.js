@@ -24,17 +24,39 @@ romanNumbers.set('C', 100);
 romanNumbers.set('D', 500);
 romanNumbers.set('M', 1000);
 
+function validRomano(algarismoRomano) {
+   
+    if(algarismoRomano.length < 4 ) return;
+     
+    const arr = algarismoRomano.split('');
+     acumulador = 0
+    arr.reduce((anterior,atual)=>{
+        if(anterior === atual) acumulador++;
 
+        return atual
+      
+    })
+      if(acumulador === 3) throw new Error('invalid number');
 
+    
+}
 function converte(algarismoRomano) {
     let retornoArabico = 0;
     let size = algarismoRomano.length;
-    
-    for(i = 0; i < size; i++) {
-        let algarismo = algarismoRomano.charAt(i)        
-        retornoArabico = romanNumbers.get(algarismo.toUpperCase())         
-    }    
+    let algarismoAnterios = 0
+      validRomano(algarismoRomano)
 
+    for(i = 0; i < size; i++) {
+        let algarismoAtual =   romanNumbers.get(algarismoRomano.charAt(i).toUpperCase())
+
+               if( algarismoAtual <= algarismoAnterios || algarismoAnterios == 0){
+                    retornoArabico += algarismoAtual;
+               }else{
+                   retornoArabico =  algarismoAtual - retornoArabico
+               }
+                 
+       algarismoAnterios = algarismoAtual  
+    }    
     return retornoArabico;
 }
 

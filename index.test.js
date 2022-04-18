@@ -33,8 +33,13 @@ test('Deve entender o símbolo IV', () => {
 test('Deve entender o símbolo XXII', () => {
     const numero = index.converte('XXII')
     expect(numero).toEqual(22);
-    //arou
-})
+
+});
+
+test('Não Deve entender o símbolo IIII', () => {
+    expect(()=>index.converte('IIII')).toThrow();
+
+});
 
 //Bora bora!
 
